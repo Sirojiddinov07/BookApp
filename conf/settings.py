@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_auth.registration',
-    'django_filters'
+    'django_filters',
+    'drf_yasg',
 
 ]
 
@@ -67,6 +68,9 @@ REST_FRAMEWORK = {
 
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 
+}
+SWAGGER_SETTINGS = {
+    'VALIDATOR_URL': 'http://localhost:0000',
 }
 
 TEMPLATES = [
